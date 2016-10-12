@@ -96,7 +96,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
                     public void onItemClick(View v, int position) {
                         //DONE:
                         // do something on item click
-                        if (isConnected) {
+                        if (connectionDetector.isNetworkAvailable()) {
                             Intent detail = new Intent(MyStocksActivity.this, DetailsActivity.class);
                             Bundle arg = new Bundle();
                             arg.putString(getString(R.string.symbol_intent_keyword),
