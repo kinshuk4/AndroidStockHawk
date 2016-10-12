@@ -4,7 +4,10 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.google.android.gms.gcm.GcmNetworkManager;
 import com.google.android.gms.gcm.TaskParams;
+import com.sam_chordas.android.stockhawk.rest.Utils;
 
 /**
  * Created by sam_chordas on 10/1/15.
@@ -28,6 +31,12 @@ public class StockIntentService extends IntentService {
     }
     // We can call OnRunTask from the intent service to force it to run immediately instead of
     // scheduling a task.
-    stockTaskService.onRunTask(new TaskParams(intent.getStringExtra("tag"), args));
+    int result = stockTaskService.onRunTask(new TaskParams(intent.getStringExtra("tag"), args));
+
+    if(result == GcmNetworkManager.RESULT_SUCCESS){
+      //send broadcast to stock hawk app widgets
+      Intent broadCastIntent = new Intent(Utils.STOCK_WIDGET_INTENT_KEY);
+      sendBroadcast(broadCastIntent);
+    }
   }
 }
