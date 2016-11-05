@@ -42,5 +42,5 @@ dependencies {
     transitive = true
   }
     compile 'com.diogobernardino:williamchart:2.2'
-    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:appcompat-v7:23.2.0'
 }
