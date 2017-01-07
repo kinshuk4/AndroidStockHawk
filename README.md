@@ -5,7 +5,11 @@ Screenshots
 -----------
 
 ### Stock list
+#### List of Stocks
 ![Listview](screenshots/stocklistview.png)
+
+#### History for Clicked Stock
+![Detailed View](screenshots/stockhistory.png)
 
 ## References
 - Icon borrowed from : http://www.iconarchive.com/show/ios7-redesign-concept-icons-by-kentagon/ios7-stock-icon.html
