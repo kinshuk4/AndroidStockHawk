@@ -4,11 +4,10 @@ An Android app for monitoring stocks. This will replace Project 3 in the Android
 Screenshots
 -----------
 
-### Stock list
-#### List of Stocks
+### List of Stocks
 ![Listview](screenshots/stocklistview.png)
 
-#### History for Clicked Stock
+### History for Clicked Stock
 ![Detailed View](screenshots/stockhistory.png)
 
 ## References
